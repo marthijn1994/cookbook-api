@@ -11,7 +11,6 @@ use Illuminate\Support\Str;
 $factory->define(Recipe::class, function (Faker $faker) {
     return [
         'user_id' => factory(User::class)->create()->id,
-        'category_id' => factory(Category::class)->create()->id,
         'uuid' => Str::uuid(),
         'title' => $faker->title,
         'description' => $faker->sentence(8),
